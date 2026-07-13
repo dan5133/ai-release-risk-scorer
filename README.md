@@ -66,3 +66,14 @@ npm run score
 # Risk Level: HIGH | Confidence: 91%
 # Stakeholder Summary: ...
 # Report written to: reports/risk-assessment-[timestamp].md
+## Why This Exists
+
+Most teams make release decisions based on pass rate.
+Pass rate tells you how many tests passed.
+It does not tell you whether the thing that matters passed.
+
+This tool knows the difference because you told it what matters.
+Define your critical paths. Set auto_hold on payment flows.
+A single failure in a critical path overrides everything else.
+
+The dashboard can be green. The recommendation can still be HOLD.
