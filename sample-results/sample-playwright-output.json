@@ -1,0 +1,52 @@
+{
+  "stats": {
+    "total": 47,
+    "passed": 44,
+    "failed": 2,
+    "skipped": 1,
+    "flaky": 3,
+    "duration": 45230
+  },
+  "suites": [
+    {
+      "title": "Payment Flow",
+      "specs": [
+        {
+          "title": "should complete payment with valid card",
+          "tags": ["payment_flow", "critical"],
+          "tests": [{ "status": "failed", "results": [{ "duration": 3200, "error": { "message": "TimeoutError: Waiting for locator('[data-testid=payment-confirm]')" } }] }]
+        },
+        {
+          "title": "should reject invalid card number",
+          "tags": ["payment_flow"],
+          "tests": [{ "status": "failed", "results": [{ "duration": 1100, "error": { "message": "AssertionError: expected 'Payment failed' to equal 'Invalid card'" } }] }]
+        }
+      ]
+    },
+    {
+      "title": "User Registration",
+      "specs": [
+        {
+          "title": "should register new user successfully",
+          "tags": ["user_registration"],
+          "tests": [{ "status": "passed", "results": [{ "duration": 2100 }] }]
+        }
+      ]
+    },
+    {
+      "title": "Search",
+      "specs": [
+        {
+          "title": "should return results for valid query",
+          "tags": ["search"],
+          "tests": [{ "status": "passed", "results": [{ "duration": 890 }] }]
+        },
+        {
+          "title": "should handle empty search",
+          "tags": ["search"],
+          "tests": [{ "status": "passed", "results": [{ "duration": 450 }, { "duration": 430 }] }]
+        }
+      ]
+    }
+  ]
+}
